@@ -1,12 +1,9 @@
-import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { COIN_GECKO_URL } from "../../../constants";
 import { convertNumbers } from "../../../functions/convertNumbers";
 import { getDaysArray } from "../../../functions/getDaysArray";
 import { getPrices } from "../../../functions/getPrices";
 import ColorToggleButton from "../../CoinPageComponents/Toggle";
 import LineChart from "../../DashboardComponents/LineChart";
-import Loader from "../../Loader";
 import "./styles.css";
 function CompareGraph({ crypto1, crypto2, days, type, setType }) {
   const [prices1, setPrices1] = useState([]);
@@ -39,13 +36,13 @@ function CompareGraph({ crypto1, crypto2, days, type, setType }) {
         display: true,
         position: "left",
         ticks:
-          type == "market_caps"
+          type === "market_caps"
             ? {
                 callback: function (value) {
                   return "$" + convertNumbers(value);
                 },
               }
-            : type == "total_volumes"
+            : type === "total_volumes"
             ? {
                 callback: function (value) {
                   return convertNumbers(value);
@@ -65,13 +62,13 @@ function CompareGraph({ crypto1, crypto2, days, type, setType }) {
           drawOnChartArea: false,
         },
         ticks:
-          type == "market_caps"
+          type === "market_caps"
             ? {
                 callback: function (value) {
                   return "$" + convertNumbers(value);
                 },
               }
-            : type == "total_volumes"
+            : type === "total_volumes"
             ? {
                 callback: function (value) {
                   return convertNumbers(value);

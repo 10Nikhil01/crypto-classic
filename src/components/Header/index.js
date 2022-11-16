@@ -25,7 +25,7 @@ function Header() {
     storedTheme === "dark" || (storedTheme === null && prefersDark);
 
   const [darkTheme, setDarkTheme] = useState(
-    defaultDark == "dark" ? true : false
+    defaultDark === "dark" ? true : false
   );
 
   if (defaultDark) {

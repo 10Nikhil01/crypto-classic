@@ -1,8 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import SelectComponent from "../Select";
-import Select from "@mui/material/Select";
-import MenuItem from "@mui/material/MenuItem";
 import "./styles.css";
 import SelectDays from "../../CoinPageComponents/SelectDays";
 import { COIN_GECKO_URL } from "../../../constants";

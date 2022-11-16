@@ -55,13 +55,13 @@ function CoinPage() {
     scales: {
       y: {
         ticks:
-          type == "market_caps"
+          type === "market_caps"
             ? {
                 callback: function (value) {
                   return "$" + convertNumbers(value);
                 },
               }
-            : type == "total_volumes"
+            : type === "total_volumes"
             ? {
                 callback: function (value) {
                   return convertNumbers(value);

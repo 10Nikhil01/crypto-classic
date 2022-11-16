@@ -5,7 +5,6 @@ import Loader from "../components/Loader";
 import DashboardWrapper from "../components/DashboardComponents/DashboardWrapper";
 import Search from "../components/DashboardComponents/Search";
 import NorthRoundedIcon from "@mui/icons-material/NorthRounded";
-import IconButton from "@mui/material/IconButton";
 import PaginationComponent from "../components/DashboardComponents/PaginationComponent";
 
 function Dashboard() {
